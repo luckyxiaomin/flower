@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+
+window.onload=function()
+{
+	var timer=null;
+	var count=0;
+   timer=setInterval(function()
+   {
+	 var flower=document.createElement('div');
+	 document.body.appendChild(flower);
+	 var aImg=document.getElementsByTagName('img');
+	 flower.style.width='100px';
+	 flower.style.height='100px';
+	 flower.innerHTML='<img src=前端案例/images/'+(++count)+'.jpg>';
+	 flower.style.position='absolute';
+	 flower.style.top=parseInt(Math.random()*600)+'px';
+	 flower.style.left=parseInt(Math.random()*1600)+'px'; 
+	  if(count>9)
+   {
+	count=0;   
+   }else if(aImg.length==999)
+   {
+	 clearInterval(timer);  
+   }else{}	  
+   },500)
+  
+};
+</script>
+<style>
+img{
+	width:50px;
+	height:50px;
+	border-radius:10px;
+	opacity:0.8;
+	filter:alpha(opacity:80);
+	}
+</style>
+</head>
+
+<body style="background:#F9F">
+
+
+</body>
+</html>
